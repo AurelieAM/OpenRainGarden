@@ -58,6 +58,13 @@ public class Application extends Controller {
    */
   public static Result profile(long id) {
 	  UserInfo user = UserInfoDB.getUser(id);
+	  /*if (Secured.isLoggedIn(ctx())) {
+		  UserInfo current = Secured.getUserInfo(ctx());
+		  if (current.getId() == user.getId()) {
+			  return ok(Profile.render(user, true));
+		  }
+	  }
+	  return ok(Profile.render(user, false));*/
 	  return ok(Profile.render(user));
   }
   

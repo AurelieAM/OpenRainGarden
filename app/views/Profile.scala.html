@@ -10,7 +10,14 @@
       <div class="panel-heading" style="background-color:#3E60AD; color: white;">
         <h1 class="text-center panel-title"> User Profile </h1>
         Name:  @user.getFirstName() @user.getLastName() 
-        <br>Email:  @user.getEmail() @if(user.isConfirmed() == true){(Confirmed)} else {<a href="@routes.Application.emailConfirmSend()"><button class="btn btn-warning">Verify</button></a>}
+        <br>Email:  @user.getEmail() 
+	    @if(user.isConfirmed() == true){
+	    	(Confirmed)
+	    }else {
+	    	@if(Secured.isLoggedIn(ctx()) && Secured.getUserInfo(ctx()).getId() == user.getId()){
+	        	<a href="@routes.Application.emailConfirmSend()"><button class="btn btn-warning">Verify</button></a>
+	        }
+	    }
       </div>
       
       <div class="panel-body">
