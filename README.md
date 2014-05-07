@@ -9,6 +9,13 @@ An example of the website's home page.
 
 ### Screencasts
 
+User Screencast  
+[https://raw.githubusercontent.com/OpenRainGarden/OpenRainGarden/version-1.1/public/install/yt-user.png](https://www.youtube.com/watch?v=OGkJtrqba_A)
+
+
+Developer Screencast  
+[https://raw.githubusercontent.com/OpenRainGarden/OpenRainGarden/version-1.1/public/install/yt-developer.png](https://www.youtube.com/watch?v=5RLiTqGaDks)
+
 ### Comments/Issues
 
 Please make a [GitHub Issue](https://github.com/OpenRainGarden/OpenRainGarden/issues) for this repository.
