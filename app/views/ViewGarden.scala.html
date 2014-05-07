@@ -60,8 +60,12 @@
           <div class="row" style="color: black; padding-left: 1em; padding-right: 1em;">         
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position: relative; bottom: 1.9em;">
               <div class="page-header"><h4>Plants</h4></div>
-              @for(plant <- rainGarden.getPlantsAsList()) {
-                @printPlantPanel(plant)
+              @if(!rainGarden.getPlantsAsList().isEmpty()) {
+                @for(plant <- rainGarden.getPlantsAsList()) {
+                  @printPlantPanel(plant)
+                }
+              } else {
+                No plants listed.
               }
           </div>
               </div>

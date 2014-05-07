@@ -4,7 +4,6 @@
 
 # Home page
 GET     /                             controllers.Application.index()
-GET     /test                         controllers.Application.page1()
 GET     /register                     controllers.Application.registerMenu()
 GET     /register/rain-garden         controllers.Application.newRainGarden()
 POST    /register/rain-garden         controllers.Application.postRainGardenRegister(isNew: Boolean)

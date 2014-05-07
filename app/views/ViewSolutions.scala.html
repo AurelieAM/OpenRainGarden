@@ -85,7 +85,7 @@
             <li><a href="@routes.Application.switchBarrelStatus(barrel.getID(), request().uri())">@if(barrel.isApproved()) {Suspend} else {Approve}</a></li>
             <li><a href="@routes.Application.viewBarrel(barrel.getID())">View Page</a></li>
             <li><a href="@routes.Application.manageRainBarrel(barrel.getID())">Edit Page</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#delete-rg@barrel.getID()">Delete Page</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#delete-rb@barrel.getID()">Delete Page</a></li>
           </ul>
         </div>
         </td>
@@ -128,7 +128,7 @@
             <li><a href="@routes.Application.switchPaverStatus(paver.getID(), request().uri())">@if(paver.isApproved()) {Suspend} else {Approve}</a></li>
             <li><a href="@routes.Application.viewPaver(paver.getID())">View Page</a></li>
             <li><a href="@routes.Application.managePermeablePavers(paver.getID())">Edit Page</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#delete-rg@paver.getID()">Delete Page</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#delete-pp@paver.getID()">Delete Page</a></li>
           </ul>
         </div>
         </td>   

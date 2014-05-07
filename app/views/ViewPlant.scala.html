@@ -3,7 +3,7 @@
 @import helper._
 @import bootstrap3._
 
-@Main("View Plants") {
+@Main("Manage Plants") {
   <div class="container">
     <div class="row">
     <div class="page-header">
@@ -34,7 +34,7 @@
               @if(userInfo != null && (userInfo.isAdmin())) {
               <td>
                   <a href="@routes.Application.managePlant(plant.getName())"><button class="btn btn-primary">Edit</button></a>
-                  <button class="btn btn-danger" data-toggle="modal" data-target="#@plant.getName()">Delete</button>
+                  <a href="#" data-toggle="modal" data-target="#delete-plant@plant.getId()"><button class="btn btn-danger">Delete</button></a>
              </td>}
           </tr>
         }        

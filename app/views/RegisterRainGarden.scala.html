@@ -30,7 +30,7 @@
                                     "Date Installed", monthTypes, dayTypes, yearTypes, false, "")
               @upload(formData("uploadFile"), "Upload Picture", url, isNew, "")
               <div class="page-header"><h3>Additional Information</h3></div>
-              @bootstrap3.plants(formData("plants"), "Plants", plantMap, "")
+              @bootstrap3.plants(formData("plants"), "Plants", plantMap, "Hover over a plant's image for more information.")
               @bootstrap3.select(formData("rainGardenSize"), "Rain Garden Size", "Please Select the Size of the Rain Garden", gardenSizeTypes, false, "")
               @bootstrap3.select(formData("waterFlowSourceSize"), "Contributing Drainage Area", "Please Select Square Footage of Contributing Drainage Area", sourceSizeTypes, false, "")
               @bootstrap3.textarea(formData("waterFlowDescription"), "3", "Waterflow Description", "Waterflow Description. Example: Water flows from my room to the rain garden.", "")

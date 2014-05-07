@@ -602,15 +602,6 @@ public class Application extends Controller {
   }
   
   /**
-   * Returns page1, a simple example of a second page to illustrate navigation.
-   * @return The Page1.
-   */
-  @Security.Authenticated(Secured.class)
-  public static Result page1() {
-    return ok(Page1.render("Welcome to Page1.", Secured.getUserInfo(ctx())));
-  }
-  
-  /**
    * Returns the sign in page.
    * @return sign in page
    */
