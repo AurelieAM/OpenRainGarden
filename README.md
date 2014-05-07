@@ -11,6 +11,7 @@
 * [MockupEvaluation](https://github.com/OpenRainGarden/OpenRainGarden/wiki/MockupEvaluation)
 * [Installation](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Installation)
 * [Use Case 2.0](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Use-Cases-2.0)
+* [User Evaluations](https://github.com/OpenRainGarden/OpenRainGarden/wiki/User-Evaluations)
 
 ### Deployment
 * [CloudBees Deployment](http://openraingarden.openraingarden.cloudbees.net/)
