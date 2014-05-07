@@ -27,7 +27,7 @@
     		<script type="text/javascript" src="@routes.Assets.at("javascripts/oms.min.js")"></script>
     		
     		<script type="text/javascript">
-			    var oahu = new google.maps.LatLng(21.4667, -157.9833);
+			    var map_center = new google.maps.LatLng(20.7, -157.5);
 				var map;
 				var geo;
 				var oms;
@@ -37,8 +37,8 @@
 					geo = new google.maps.Geocoder();
 					<!-- Set mapOptions -->
 					var mapOptions = {
-						center: oahu,
-						zoom: 11,
+						center: map_center,
+						zoom: 8,
 						mapTypeId: google.maps.MapTypeId.HYBRID
 					};
 					<!-- Create Google Map -->
