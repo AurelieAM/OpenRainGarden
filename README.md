@@ -11,7 +11,7 @@ An example of the website's home page.
 
 ### Comments/Issues
 
-Please make a ![GitHub Issue](https://github.com/OpenRainGarden/OpenRainGarden/issues).
+Please make a [GitHub Issue](https://github.com/OpenRainGarden/OpenRainGarden/issues) for this repository.
 
 ### Wiki Links
 * [Related Technology](https://github.com/OpenRainGarden/OpenRainGarden/wiki/RelatedTechnology)  
