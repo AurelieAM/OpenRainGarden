@@ -41,22 +41,33 @@
 			
 		</div>
 		<div class="panel-body" id="content_blocks">
-			@for(block <- IndexContentDB.getIndexContents()) {
-			<div class="well">
-				<div class="row featurette">
-	      	  		<div class="col-md-7">
-	         			 <h2 class="featurette-heading m">@block.getTitle()</h2><br>
-	         				 <p class="lead ">@block.getContent()</p>    
-	         				 <p class="joinus text-center">
-			  				</p>
-	       			 </div>
-	       		 	<div class="col-md-5">
-	          			<img class="featurette-image img-responsive image-center"  alt="500x500" src="@routes.Application.retrieveIndexContentImage(block.getId())"></img>
-	          		</div>
-	       		</div>
-	       		<div style="text-align:left"><a href= "/adminpanel/editindexblock/@block.getId()"><button type="button"><h4>Edit</h4></button></a></div>
-	       	</div>
-      		}
+          @for(block <- IndexContentDB.getIndexContents()) {
+          <div class="well">
+        <div class="row featurette ">
+          <div class="col-md-7 ">
+            <h2 class="featurette-heading m">@block.getTitle()</h2><br>
+            <p class="lead ">@block.getContent()</p>    
+  
+        @if(block.hasFirstButton || block.hasSecondButton) {
+        <p class="joinus text-center">
+          @if(block.hasFirstButton) {
+            <a href="@block.getFirstButtonURL"><button class="btn btn-primary">@block.getFirstButtonText()</button></a>
+          }
+          @if(block.hasSecondButton) {
+            <a href="@block.getSecondButtonURL"><button class="btn btn-primary">@block.getSecondButtonText()</button></a>
+          }
+        </p>
+        }
+        
+          </div>
+          <div class="col-md-5">
+            
+            <img class="featurette-image img-responsive image-center"  alt="500x500" src="@routes.Application.retrieveIndexContentImage(block.getId())"></img>
+          </div>
+        </div>
+        <div style="text-align:left"><a href= "/adminpanel/editindexblock/@block.getId()"><button type="button"><h4>Edit</h4></button></a></div>
+        </div>
+      }
       		<div style="text-align:right"><a href="#content_blocks"><h4>Back to top</h4></a></div>
 		</div>
 	</div>

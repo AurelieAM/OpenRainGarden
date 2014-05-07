@@ -143,7 +143,7 @@ public class Application extends Controller {
         HeaderFooterFormData data = (HeaderFooterDB.getHeaderFooter(1) == null) 
             ? new HeaderFooterFormData() : new HeaderFooterFormData(HeaderFooterDB.getHeaderFooter(1));
         Form<HeaderFooterFormData> formData = Form.form(HeaderFooterFormData.class).fill(data);
-        return ok(EditIndexContent.render(formData,  UserInfoDB.getUser(Secured.getUser(ctx()))));         
+        return ok(EditHeaderFooter.render(formData,  UserInfoDB.getUser(Secured.getUser(ctx()))));         
       }
       else {
         return badRequest(ErrorReport.render(""));
@@ -163,7 +163,7 @@ public class Application extends Controller {
 			  Form<HeaderFooterFormData> formData = Form.form(HeaderFooterFormData.class).bindFromRequest();
 			  if (formData.hasErrors() == true) {
 				  System.out.println("Edit profile Errors found.");
-				  return badRequest(EditIndexContent.render(formData,  UserInfoDB.getUser(Secured.getUser(ctx()))));
+				  return badRequest(EditHeaderFooter.render(formData,  UserInfoDB.getUser(Secured.getUser(ctx()))));
 			  }
 			  else {
 				  HeaderFooterFormData data = formData.get();

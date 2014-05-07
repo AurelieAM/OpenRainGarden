@@ -1,0 +1,61 @@
+@(headerFooterFormData: Form[views.formdata.HeaderFooterFormData], user: UserInfo)
+
+@import helper._
+@import bootstrap3._
+
+@Main("Admin control panel") {
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="panel panel-default">
+          <div class="panel-heading">
+             <div class="panel-title"><h1>Manage Header & Footer</h1></div>           
+          </div>
+				<div class="panel-body">
+
+          <div class="page-header"><h2>Header</h2></div>
+					<div class="well">
+						
+					
+						<div class="press-banner" style="margin-top:0px;!important; background-image: url(@routes.Application.retrieveHomeBannerImage())">
+						
+						
+							<h1 class="text-center bigFont"><b>@HeaderFooterDB.getHeader(1)</b></br><p style="font-size:80%">@HeaderFooterDB.getSubHeader(1)</p></h1>
+						</div>
+					</div>
+					<div style="height:20px"></div>
+					@form(routes.Application.postIndexContentFormData(), 'class -> "form-horizontal", 'enctype -> "multipart/form-data" ){
+            @hidden(headerFooterFormData("id"))
+						@bootstrap3.textarea(headerFooterFormData("header"),"1", "Header:", "Header", "")
+						@bootstrap3.textarea(headerFooterFormData("subHeader"),"1", "SubHeader:", "SubHeader", "")
+						@file(headerFooterFormData("uploadFile"), "Upload Image:", "Upload a 700x260 pixel image or rectangle size image")													    
+            <div class="page-header"><h2>Footer</h2></div>
+				    
+				    <div class="well">
+				
+						<p style="text-align: center">@HeaderFooterDB.getFooter(1)</p>
+						<p style="text-align: center">@HeaderFooterDB.getSubFooter(1)</p>
+					</div>
+						@bootstrap3.textarea(headerFooterFormData("footer"),"5", "Footer:", "footer", "")
+						@bootstrap3.textarea(headerFooterFormData("subFooter"),"5", "Subfooter:", "subfooter", "")
+					
+					
+					<button type="submit" style="margin-top:-10px;" class="btn btn-primary pull-right">Submit Change</button>
+					<div style="height:100px"></div>
+					}
+					
+					
+				</div>
+        
+        </div>
+						
+				
+				
+			</div>
+			
+				
+		</div>
+		<div style="height:200px"></div>
+	</div>
+</div>
+}
