@@ -62,13 +62,7 @@
 						@if(garden.hideAddress() == false && garden.isApproved() == true){
 							geo.geocode( {'address': '@garden.getAddress()'}, function(results,status) {
 								if (status == google.maps.GeocoderStatus.OK) {
-									var image;
-									@if(garden.hasPicture()){
-										image = '@routes.Application.retrieveGardenImage(garden.getID())';
-									} else {
-										image = '@routes.Assets.at("images/placeholder.gif")';
-									}
-									infoString = createInfo('Rain Garden', image, '@garden.getPropertyType()', '@garden.getDateInstalled()', '/view/rain-garden/'+'@garden.getID');
+									infoString = createInfo('Rain Garden', '@routes.Application.retrieveGardenImage(garden.getID())', '@garden.getPropertyType()', '@garden.getDateInstalled()', '/view/rain-garden/'+'@garden.getID');
 									addMarker('Garden', results[0].geometry.location, infoString);
 								}
 							});
@@ -79,13 +73,7 @@
 						@if(barrel.hideAddress() == false && barrel.isApproved() == true){
 							geo.geocode( {'address': '@barrel.getAddress()'}, function(results,status) {
 								if (status == google.maps.GeocoderStatus.OK) {
-									var image;
-									@if(barrel.hasPicture()){
-										image = '@routes.Application.retrieveBarrelImage(barrel.getID())';
-									} else {
-										image = '@routes.Assets.at("images/placeholder.gif")';
-									}
-									infoString = createInfo('Rain Barrel', image, '@barrel.getPropertyType()', '@barrel.getDateInstalled()', '/view/rain-barrel/'+'@barrel.getID');
+									infoString = createInfo('Rain Barrel', '@routes.Application.retrieveBarrelImage(barrel.getID())', '@barrel.getPropertyType()', '@barrel.getDateInstalled()', '/view/rain-barrel/'+'@barrel.getID');
 									addMarker('Barrel', results[0].geometry.location, infoString);
 								}
 							});
@@ -96,13 +84,7 @@
 						@if(paver.hideAddress() ==  false && paver.isApproved() == true){
 							geo.geocode( {'address': '@paver.getAddress()'}, function(results,status) {
 								if (status == google.maps.GeocoderStatus.OK) {
-									var image;
-									@if(paver.hasPicture()){
-										image = '@routes.Application.retrievePaverImage(paver.getID())';
-									} else {
-										image = '@routes.Assets.at("images/placeholder.gif")';
-									}
-									infoString = createInfo('Permeable Paver', image, '@paver.getPropertyType()', '@paver.getDateInstalled()', '/view/permeable-pavers/'+'@paver.getID');
+									infoString = createInfo('Permeable Paver', '@routes.Application.retrievePaverImage(paver.getID())', '@paver.getPropertyType()', '@paver.getDateInstalled()', '/view/permeable-pavers/'+'@paver.getID');
 									addMarker('Paver', results[0].geometry.location, infoString);
 								}
 							});
