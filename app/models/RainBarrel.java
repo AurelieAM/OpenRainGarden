@@ -484,6 +484,18 @@ public class RainBarrel extends Model {
   public static Finder<Long, RainBarrel> find() {
     return new Finder<Long, RainBarrel>(Long.class, RainBarrel.class);
   }
+  
+  /**
+   * Return a valid date if it exists.
+   * @return The string for date installed formatted for CSV format.
+   */
+  public String getDateInstalledAsCSV() {
+    if (this.dateInstalled.length() < VALID_DATE_LENGTH) {
+      return "";
+    }
+    return dateInstalled;   
+  }
+  
 
   /**
    * Format barrel information to CSV format.
@@ -491,10 +503,10 @@ public class RainBarrel extends Model {
    */
   public String formatToCSV() {
     return "\"" + this.title + "\", " + "\"" + this.propertyType + "\", " + "\"" + this.address + "\", " + "\"" 
-           + this.description + "\", " + "\"" + this.dateInstalled + "\", " + "\"" + this.rainBarrelType + "\", "
+           + this.description + "\", " + "\"" + getDateInstalledAsCSV() + "\", " + "\"" + this.rainBarrelType + "\", "
            + "\"" + this.capacity + "\", " + "\"" + this.color + "\", " + "\"" + this.material + "\", " 
            + "\"" + this.estimatedCost + "\", " + "\"" + this.waterUse + "\", " 
            + "\"" + this.overflowFrequency + "\", " + "\"" + this.cover + "\", " + "\"" + this.obtainedFrom + "\", "
-           + "\"" + this.installationType + "\", " + this.getOwner().getEmail() + "\n";
+           + "\"" + this.installationType + "\", " + this.getOwner().getEmail() + "\"\n";
   }
 }

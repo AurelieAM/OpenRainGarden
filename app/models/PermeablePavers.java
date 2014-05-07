@@ -410,6 +410,18 @@ public class PermeablePavers extends Model {
   public static Finder<Long, PermeablePavers> find() {
     return new Finder<Long, PermeablePavers>(Long.class, PermeablePavers.class);
   }
+  
+  /**
+   * Return a valid date if it exists.
+   * @return The string for date installed formatted for CSV format.
+   */
+  public String getDateInstalledAsCSV() {
+    if (this.dateInstalled.length() < VALID_DATE_LENGTH) {
+      return "";
+    }
+    return dateInstalled;   
+  }
+  
 
   /**
    * Format permable paver information in CSV format.
@@ -417,8 +429,8 @@ public class PermeablePavers extends Model {
    */
   public String formatToCSV() {
     return "\"" + this.title + "\", " + "\"" + this.propertyType + "\", " + "\"" + this.address + "\", " + "\"" 
-           + this.description + "\", " + "\"" + this.dateInstalled + "\", " + "\"" + this.material + "\", " 
+           + this.description + "\", " + "\"" + getDateInstalledAsCSV() + "\", " + "\"" + this.material + "\", " 
            + this.previousMaterial + "\", " + this.size + "\", " + this.installer + "\", " 
-           + this.owner.getEmail() + "\n";
+           + this.owner.getEmail() + "\"\n";
   }
 }
