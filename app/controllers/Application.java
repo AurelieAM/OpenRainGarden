@@ -680,7 +680,7 @@ public class Application extends Controller {
 	  MailerAPI mail = play.Play.application().plugin(MailerPlugin.class).email();
 	  mail.setSubject("Sign up Email Confirmation");
 	  mail.setRecipient(user.getEmail());
-	  mail.setFrom("openraingarden@gmail.com");
+	  mail.setFrom(UserInfoDB.getAdmins().get(0).getEmail());
 	  
 	  String url = routes.Application.index().absoluteURL(request()) + "confirm/" + id + "/" + user.getConfirmHash();
 	  //System.out.println(url);
@@ -1434,7 +1434,7 @@ public class Application extends Controller {
 		  MailerAPI mail = play.Play.application().plugin(MailerPlugin.class).email();
 		  mail.setSubject("New Registered Solution Notification");
 		  mail.setRecipient(current.getEmail());
-		  mail.setFrom("openraingarden@gmail.com");
+		  mail.setFrom(current.getEmail());
 		  
 		  String message = "A new solution has been registered!\n" + "Please view the solution and verify that it is legit:\n" + url;
 		  mail.send(message);
@@ -1477,7 +1477,7 @@ public class Application extends Controller {
 		  MailerAPI mail = play.Play.application().plugin(MailerPlugin.class).email();
 		  mail.setSubject("Password Recovery");
 		  mail.setRecipient(data.email);
-		  mail.setFrom("openraingarden@gmail.com");
+		  mail.setFrom(UserInfoDB.getAdmins().get(0).getEmail());
 		  
 		  String message = "Your password has been reset to:\n" + new_pw;
 		  mail.send(message);

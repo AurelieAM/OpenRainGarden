@@ -10,7 +10,7 @@ import java.util.List;
 public class UserInfoDB {
 	
 	/**
-	 * Adds given user info to the userDB
+	 * Adds given user info to the UserDB
 	 * @param firstName
 	 * @param lastName
 	 * @param email
@@ -24,6 +24,17 @@ public class UserInfoDB {
 		return userInfo.getId();
 	}
 	
+	/**
+	 * Adds the given user info the UserDB
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param telephone
+	 * @param password
+	 * @param isAdmin
+	 * @param isConfirm
+	 * @return
+	 */
 	public static long addUserInfo(String firstName, String lastName, String email, String telephone, String password, boolean isAdmin, boolean isConfirm) {
 		UserInfo userInfo = new UserInfo(firstName, lastName, email, telephone, password, isAdmin, isConfirm);
 		userInfo.save();
@@ -48,6 +59,11 @@ public class UserInfoDB {
 		return UserInfo.find().where().eq("email", email).findUnique();
 	}
 	
+	/**
+	 * Returns the UserInfo based on the given id
+	 * @param id
+	 * @return
+	 */
 	public static UserInfo getUser(Long id) {
 		return UserInfo.find().where().eq("id", id).findUnique();
 	}
