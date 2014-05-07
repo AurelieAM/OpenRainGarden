@@ -15,6 +15,7 @@ import models.RainGarden;
 import models.RainGardenDB;
 import models.Resource;
 import models.ResourceDB;
+import models.UserInfo;
 import play.Application;
 import play.GlobalSettings;
 import play.Logger;
@@ -45,27 +46,23 @@ public class Global extends GlobalSettings {
    * @param app A Play Framework application.
    */
   public void onStart(Application app) {
-    // Populate plant database.
     populatePlantDB();
     populateIndexContentDB();
     
-    //Add phoney users
+    //Add seeded users.
+    Long id = null;
     if (UserInfoDB.getUsers().isEmpty()) {
-      UserInfoDB.addUserInfo("John", "Smith", "johnsmith@gmail.com", "1234567", BCrypt.hashpw("pw", BCrypt.gensalt()), false);
-      UserInfoDB.addUserInfo("Jane", "Smith", "janesmith@gmail.com", "1234567", BCrypt.hashpw("pw", BCrypt.gensalt()), false);
-      //String admin_email = System.getenv("MAIL_USERNAME");
-      //String admin_pw = System.getenv("MAIL_PASSWORD");
       String admin_email = Play.application().configuration().getString("admin_email");
       String admin_pw = Play.application().configuration().getString("admin_pw");
       Logger.debug(admin_email + " " + admin_pw);
       if (admin_email != null && admin_pw != null) {
-    	  System.out.println("Creating admin account");
-    	  UserInfoDB.addUserInfo("Admin", "HOK", admin_email, "1234567", BCrypt.hashpw(admin_pw, BCrypt.gensalt()), true, true);
+    	  id = UserInfoDB.addUserInfo("Site", "Administrator", admin_email, "", BCrypt.hashpw(admin_pw, 
+    	                              BCrypt.gensalt()), true, true);
       }
     }
         
     // Add rain garden.
-    if (RainGarden.find().all().isEmpty()) {
+    if (RainGarden.find().all().isEmpty() && id != null) {
       List<String> plants = new ArrayList<String>();
       plants.add("'Ahu'awa");
       plants.add("'Ae'ae");
@@ -77,40 +74,40 @@ public class Global extends GlobalSettings {
             + "our yard when it rains.", 
         "4", "5", "2014", plants, "0-60 Square Feet", "250-500 Square Feet", "The primary source of water comes from"
             + " our roof. The water is funneled through downspouts which all lead to our rain garden.", 
-        "3.00"), UserInfoDB.getUser("johnsmith@gmail.com"));
+        "3.00"), UserInfoDB.getUser(id));
       
       garden.setApproved(true);
       garden.setExternalImageURL(routes.Assets.at("images/garden-1.jpg").url());
       garden.save();
       
-      if (garden != null && Comment.find().all().isEmpty()) {
+      if (garden != null && Comment.find().all().isEmpty() && id != null) {
         CommentDB.addComment(new CommentFormData("Wow, you garden looks nice!"), 
             garden,
-            UserInfoDB.getUser("janesmith@gmail.com"));
+            UserInfoDB.getUser(id));        
       }
     }
     
     // Add rain barrel.
-    if (RainBarrel.find().all().isEmpty()) {
+    if (RainBarrel.find().all().isEmpty() && id != null) {
     RainBarrel barrel = RainBarrelDB.addRainBarrel(new RainBarrelFormData("John's Rain Barrel", "Residential", 
         "564 Ulahala St.", "No", "We installed a set of rain barrels on the side of our house because we wanted to "
             + "protect the plants from excessive flooding. The water is collected from the gutters on the roof and flow"
             + " into these barrels. The collected water is then used for gardening. It helps cutdown our water bill!", 
             "4", "5", "2014", "Old Drum", "50 Gallons", "Blue", "Plastic", "25.00", "Gardening", "Once a year.", 
             "Covered", "Home Depot", "Self-Installed"), 
-        UserInfoDB.getUser("johnsmith@gmail.com"));
+        UserInfoDB.getUser(id));
     barrel.setApproved(true);
     barrel.setExternalImageURL(routes.Assets.at("images/barrel-1.jpg").url());
     barrel.save();
     }
     
     // Add permeable paver.
-    if (PermeablePavers.find().all().isEmpty()) {
+    if (PermeablePavers.find().all().isEmpty() && id != null) {
     PermeablePavers paver = PermeablePaversDB.addPermeablePavers(new PermeablePaversFormData("John's Permeable Paver", 
         "Residential", "564 Ulahala St.", "No", "Whenever it rains, our driveway becomes a mini river. The rain would "
             + "just pool in our driveway. After we installed our permeable paver, we noticed a drastic decrease in "
             + "pooling and the lawn around our driveway looks more green.", "4", "5", "2014", "Asphalt", "Concrete", 
-            "<200 Square Feet", "Self-Installed"),  UserInfoDB.getUser("johnsmith@gmail.com"));
+            "<200 Square Feet", "Self-Installed"),  UserInfoDB.getUser(id));
     paver.setApproved(true);
     paver.setExternalImageURL(routes.Assets.at("images/paver-1.jpg").url());
     paver.save();
