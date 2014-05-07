@@ -19,7 +19,7 @@
           <div class="alert alert-info">Fields marked with * are required.</div>
               @form(action = routes.Application.postPlantRegistration(isNew), 'class -> "form-horizontal", 'enctype -> "multipart/form-data") {
                   @hidden(formData("id"))
-                  @text(formData("name"), "Name *", "Name of Plant", "")
+                  @bootstrap3.plantName(formData("name"), "Name *", "Name of Plant", "", isNew)
                   @text(formData("scientificName"), "Scientific Name *", "Scientific Name of Plant", "")
                   @bootstrap3.select(formData("placement"), "Placement *", "Select the Plant's Placement in a Rain Garden", placementTypes, false, "")
                   @bootstrap3.select(formData("growth"), "Growth *", "Please Select Growth Type of the Plant", growthTypes, false, "")

@@ -8,10 +8,11 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="padding-right:10px;">
+          <div class="panel-heading">
+             <div class="panel-title"><h1>Manage Index Content</h1></div>           
+          </div>
 				<div class="panel-body">
-
-					<div  class="alert alert-info"><h2></>Header Section</h2><h4>(Edit > Submit Change)</h4></div>
 					</div>
 					<div style="height:20px"></div>
 					@form(routes.Application.postEditIndexBlock(isNew), 'class -> "form-horizontal", 'enctype -> "multipart/form-data" ) {
@@ -23,16 +24,14 @@
             @bootstrap3.text(formData("secondButtonText"), "Button 2 Text", "Text that is displayed on a button.", "")
             @bootstrap3.text(formData("secondButtonURL"), "Button 2 URL", "Destination URL for Button 1", "")            
             @upload(formData("uploadFile"), "Upload Picture", url, isNew, "")
-					<div style="height:100px"><button type="submit" style="color:#000" class="btn btn-default pull-right">Submit Change</button></div>		
+					 <div style="height:100px;"><button type="submit" class="btn btn-primary pull-right">Submit Change</button></div>		
 								
 				  
 					}
 					
 					
 				</div>
-				<div  class="text-center alert alert-info"><h4>Submit our change before you go back</h4></div>
-				<div style="height:0px"><button href="@(routes.Application.adminPanel())" style="color:#000" class="btn btn-default pull-right">GO BACK TO Admin Control Panel</button>		
-					</div>
+        </div>
 						
 				
 				
