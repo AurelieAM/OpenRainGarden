@@ -10,7 +10,7 @@
 		</div>
 		<div class="panel-body">
 			<div class="well">
-				<div style="margin-left:20px; text-align:left"><a href="/adminpanel/editindexcontent"><button type="button"><h4>Edit</h4></button></a></div>
+				<div style="margin-left:20px; text-align:left"><a href="/admin/edit/header-footer"><button type="button"><h4>Edit</h4></button></a></div>
 
 				<div class="press-banner" style="margin-top:-50px;!important; background-image: url(@routes.Application.retrieveHomeBannerImage())">
 					
@@ -65,7 +65,7 @@
             <img class="featurette-image img-responsive image-center"  alt="500x500" src="@routes.Application.retrieveIndexContentImage(block.getId())"></img>
           </div>
         </div>
-        <div style="text-align:left"><a href= "/adminpanel/editindexblock/@block.getId()"><button type="button"><h4>Edit</h4></button></a></div>
+        <div style="text-align:left"><a href= "@routes.Application.editIndexBlock(block.getId())"><button type="button"><h4>Edit</h4></button></a></div>
         </div>
       }
       		<div style="text-align:right"><a href="#content_blocks"><h4>Back to top</h4></a></div>
@@ -84,7 +84,7 @@
 						<h4 style="color:black">Rain Garden Resources</h4>
 					</div>
 					<div class="col-md-6" style="text-align:right">
-						<a href="/adminpanel/editresource/garden/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Rain Garden Resource</button></a>
+						<a href="/admin/editresource/garden/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Rain Garden Resource</button></a>
 					</div>
 				</div>
 				<div class="row">
@@ -100,7 +100,7 @@
 						<h4 style="color:black">Rain Barrel Resources</h4>
 					</div>
 					<div class="col-md-6" style="text-align:right">
-						<a href="/adminpanel/editresource/barrel/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Rain Barrel Resource</button></a>
+						<a href="/admin/editresource/barrel/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Rain Barrel Resource</button></a>
 					</div>
 				</div>
 				<div class="row">
@@ -116,7 +116,7 @@
 						<h4 style="color:black">Permeable Paver Resources</h4>
 					</div>
 					<div class="col-md-6" style="text-align:right">
-						<a href="/adminpanel/editresource/paver/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Permeable Paver Resource</button></a>
+						<a href="/admin/editresource/paver/-1"><button type="button"><span class="glyphicon glyphicon-plus"></span> Add Permeable Paver Resource</button></a>
 					</div>
 				</div>
 				<div class="row">
