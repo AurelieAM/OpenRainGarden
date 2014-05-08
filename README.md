@@ -7,6 +7,8 @@ An example of the website's home page.
 
 ### Usage
 
+[Developer Guide](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Developer-Guide)
+
 ### Screencasts
 
 User Screencast  
@@ -22,9 +24,9 @@ Please make a [GitHub Issue](https://github.com/OpenRainGarden/OpenRainGarden/is
 
 ### Wiki Links
 
-* [Installation](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Installation)
+* [Team Meeting/Check-In](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Team-Meetings-&-Check-In)
 * [Use Cases](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Use-Cases-3.0)
 * [User Evaluations](hhttps://github.com/OpenRainGarden/OpenRainGarden/wiki/User-Evaluations)
 
 ### Deployment
-* [CloudBees Deployment](http://openraingarden.openraingarden.cloudbees.net/)
+* [Live Deployment](http://openraingarden.openraingarden.cloudbees.net/)
