@@ -15,9 +15,9 @@
 					@form(routes.Application.postSignUp(), 'class -> "form-horizontal") {
 						@text(signupForm("firstName"), "First Name", "First Name", "")
 						@text(signupForm("lastName"), "Last Name", "Last Name", "")
-						@email(signupForm("email"), "Email", "Email", "")
-						@telephone(signupForm("telephone"), "Telephone", "Telephone (Optional)", "")
-						@password(signupForm("password"), "Password", "Password", "")
+						@email(signupForm("email"), "Email", "example@email.com", "")
+						@telephone(signupForm("telephone"), "Telephone (Optional)", "###-###-####", "")
+						@password(signupForm("password"), "Password", "Please enter desired password", "Password needs to be between 6-20 characters and contain atleast one letter, one number and one symbol (~, !, @, #, $, %, ^, &, or *).")
 						@password(signupForm("repeatpw"), "Repeat Password", "Repeat Password", "")
 
 						<div class="form-group">

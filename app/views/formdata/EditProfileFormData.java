@@ -2,6 +2,9 @@ package views.formdata;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 import models.UserInfo;
 import models.UserInfoDB;
 import play.data.validation.ValidationError;
@@ -36,6 +39,9 @@ public class EditProfileFormData {
 	/** Flag for whether a new passwrod was entered */
 	public boolean change_pw;
 	
+	/** Required password pattern: length of 6-20 characters containing at least one lowercase letter, one upper case letter, one number, and one symbol (~!@#$%^&*) */
+	private static final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[~!@#$%^&*]).{6,20})";
+	
 	public EditProfileFormData() {
 		
 	}
@@ -57,11 +63,14 @@ public class EditProfileFormData {
 	 * @return A list of errors or null if form is valid
 	 */
 	public List<ValidationError> validate() {
+		Pattern pattern;
+		Matcher matcher;
 		ArrayList<ValidationError> errors = new ArrayList<ValidationError>();
 		
 		if (this.firstName == null || this.firstName.length() == 0) {
 			errors.add(new ValidationError("firstName", "Please enter your first name."));
 		}
+		
 		if (this.lastName == null || this.lastName.length() == 0) {
 			errors.add(new ValidationError("lastName", "Please enter your last name."));
 		}
@@ -75,22 +84,42 @@ public class EditProfileFormData {
 			}
 		}
 		
+		if (this.telephone != null && this.telephone.length() > 0)  {
+			pattern = Pattern.compile("\\d{3}-\\d{3}-\\d{7}");
+			matcher = pattern.matcher(this.telephone);
+			if (matcher.matches() == false) {
+				errors.add(new ValidationError("telephone", "Please enter your telephone in the format: ###-###-####"));
+			}
+		}
+		
 		boolean pw = false;
 		if (this.new_password != null && this.new_password.length() != 0) {
-			pw = true;
+			pattern = Pattern.compile(PASSWORD_PATTERN);
+			matcher = pattern.matcher(this.new_password);
+			if (matcher.matches() == false) {
+				pw = true;
+				errors.add(new ValidationError("password", ""));
+			}
 		}
+
 		boolean rpw = false;
 		if (this.repeat_pw != null && this.repeat_pw.length() != 0) {
 			rpw = true;
-			
+		}
+		else {
+			errors.add(new ValidationError("repeat_pw", "Please repeat your password."));
 		}
 		
-		if (pw == true && rpw == true && this.new_password.equals(this.repeat_pw) == true) {
-			change_pw = true;
+		if (pw == true && rpw == true) {
+			if (this.new_password.equals(this.repeat_pw) == true) {
+				change_pw = true;
+			}
+			else {
+				errors.add(new ValidationError("repeat_pw", "Passwords must match!"));
+			}
 		}
-		else if (!(pw == false && rpw == false)) {
-			errors.add(new ValidationError("new_password", "Passwords must match!"));
-			errors.add(new ValidationError("repeat_pw", "Passwords must match!"));
+		else if (pw == false && rpw == true) {
+			this.repeat_pw = null;
 		}
 		
 		return errors.isEmpty() ? null : errors;

@@ -15,9 +15,9 @@
 					@form(routes.Application.postEditProfile(), 'class -> "form-horizontal") {
 						@text(editProfileForm("firstName"), "First Name", "First Name", "")
 						@text(editProfileForm("lastName"), "Last Name", "Last Name", "")
-						@telephone(editProfileForm("telephone"), "Telephone", "Telephone (Optional)", "")
-						@email(editProfileForm("email"), "New Email", "New Email", "")
-						@password(editProfileForm("new_password"), "New Password", "New Password", "")
+						@telephone(editProfileForm("telephone"), "Telephone (Optional)", "###-###-####", "")
+						@email(editProfileForm("email"), "New Email", "new_example@email.com", "")
+						@password(editProfileForm("new_password"), "New Password", "New Password", "Password needs to be between 6-20 characters and contain atleast one letter, one number and one symbol (~, !, @, #, $, %, ^, &, or *).")
 						@password(editProfileForm("repeat_pw"), "Repeat Password", "Repeat Password", "")
 
 						<div class="form-group">
