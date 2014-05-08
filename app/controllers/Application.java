@@ -33,7 +33,7 @@ import views.html.*;
  * Implements the controllers for this application.
  */
 public class Application extends Controller {
-  private static final long MAX_FILE_SIZE = 102400;
+  private static final long MAX_FILE_SIZE = 1048576;
 
   /**
    * Returns the home page. 

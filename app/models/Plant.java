@@ -175,7 +175,8 @@ public class Plant extends Model {
    * @return The name of the plant without markings/accents.
    */
   public String getPictureName() {
-    return Normalizer.normalize(this.name, Normalizer.Form.NFD).replaceAll("[^A-Za-z0-9]", "").toLowerCase() + ".jpg";
+    return this.id + ".jpg";
+    //return Normalizer.normalize(this.name, Normalizer.Form.NFD).replaceAll("[^A-Za-z0-9]", "").toLowerCase() + ".jpg";
   }
   
   /**
