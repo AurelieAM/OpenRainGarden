@@ -792,7 +792,7 @@ public class Application extends Controller {
       }
       if (picture.getFile().length() > MAX_FILE_SIZE) {
         errors.add(new ValidationError("uploadFile", "The file \"" + picture.getFilename() + "\" is too large. "
-            + "Please select a file that is under 2.5 MB"));
+            + "Please select a file that is under 1 MB"));
       }
     }
     if (!errors.isEmpty()) {
@@ -821,7 +821,7 @@ public class Application extends Controller {
       }
       if (picture.getFile().length() > MAX_FILE_SIZE) {
         errors.add(new ValidationError("uploadFile", "The file \"" + picture.getFilename() + "\" is too large. "
-            + "Please select a file that is under 2.5 MB"));
+            + "Please select a file that is under 1 MB"));
       }
     }
     if (!errors.isEmpty()) {
@@ -850,7 +850,7 @@ public class Application extends Controller {
       }
       if (picture.getFile().length() > MAX_FILE_SIZE) {
         errors.add(new ValidationError("uploadFile", "The file \"" + picture.getFilename() + "\" is too large. "
-            + "Please select a file that is under 2.5 MB"));
+            + "Please select a file that is under 1 MB"));
       }
     }
     if (!errors.isEmpty()) {
@@ -1117,7 +1117,7 @@ public class Application extends Controller {
       }
       if (picture.getFile().length() > MAX_FILE_SIZE) {
         errors.add(new ValidationError("uploadFile", "The file \"" + picture.getFilename() + "\" is too large. "
-            + "Please select a file that is under 2.5 MB"));
+            + "Please select a file that is under 1 MB"));
       }
     }
     if (!errors.isEmpty()) {
@@ -1261,7 +1261,7 @@ public class Application extends Controller {
 			  errors.add(new ValidationError("uploadFile", "The file: " + picture.getFilename() + " is not an accepted file type. Please select a .jpg, .jpeg, or .png file."));
 		  }
 		  if (picture.getFile().length() > MAX_FILE_SIZE) {
-			  errors.add(new ValidationError("uploadFile", "The file " + picture.getFilename() + "if too large. Please select a file that is under 2.5 MB"));
+			  errors.add(new ValidationError("uploadFile", "The file " + picture.getFilename() + "if too large. Please select a file that is under 1 MB"));
 		  }
 	  }
 	  if (errors.isEmpty() == false) {
@@ -1519,7 +1519,7 @@ public class Application extends Controller {
       }
       if (picture.getFile().length() > MAX_FILE_SIZE) {
         errors.add(new ValidationError("uploadFile", "The file \"" + picture.getFilename() + "\" is too large. "
-            + "Please select a file that is under 2.5 MB"));
+            + "Please select a file that is under 1 MB"));
       }
     }
     if (!errors.isEmpty()) {

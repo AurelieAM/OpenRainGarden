@@ -19,12 +19,12 @@
           <div class="alert alert-info">Fields marked with * are required.</div>
               @form(action = routes.Application.postPlantRegistration(isNew), 'class -> "form-horizontal", 'enctype -> "multipart/form-data") {
                   @hidden(formData("id"))
-                  @bootstrap3.plantName(formData("name"), "Name *", "Name of Plant", "", isNew)
+                  @text(formData("name"), "Name *", "Name of Plant", "")
                   @text(formData("scientificName"), "Scientific Name *", "Scientific Name of Plant", "")
                   @bootstrap3.select(formData("placement"), "Placement *", "Select the Plant's Placement in a Rain Garden", placementTypes, false, "")
                   @bootstrap3.select(formData("growth"), "Growth *", "Please Select Growth Type of the Plant", growthTypes, false, "")
                   @bootstrap3.select(formData("climateType"), "Climate *", "Please Select the Climate Type of the Plant", climateTypes, false, "")
-                  @upload(formData("uploadFile"), "Upload Picture", url, isNew, "")                                                               
+                  @upload(formData("uploadFile"), "Upload Picture", url, isNew, "Upload files may be up to 1 MB. For best results, please upload a square-shaped image.")                                                               
               <hr/>
               <button id="submit" type="submit" class="btn btn-primary pull-right">@registrationType()</button>
           </div>

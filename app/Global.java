@@ -54,7 +54,6 @@ public class Global extends GlobalSettings {
     if (UserInfoDB.getUsers().isEmpty()) {
       String admin_email = Play.application().configuration().getString("admin_email");
       String admin_pw = Play.application().configuration().getString("admin_pw");
-      Logger.debug(admin_email + " " + admin_pw);
       if (admin_email != null && admin_pw != null) {
     	  id = UserInfoDB.addUserInfo("Site", "Administrator", admin_email, "", BCrypt.hashpw(admin_pw, 
     	                              BCrypt.gensalt()), true, true);
@@ -64,52 +63,49 @@ public class Global extends GlobalSettings {
     // Add rain garden.
     if (RainGarden.find().all().isEmpty() && id != null) {
       List<String> plants = new ArrayList<String>();
-      plants.add("'Ahu'awa");
-      plants.add("'Ae'ae");
-      plants.add("'A'ali'i");
-      RainGarden garden = RainGardenDB.addRainGarden(new RainGardenFormData("John's Rain Garden", "Residential", 
-        "564 Ulahala St.", "No", "We installed our rain garden because we live in an area prone to daily rainfall. "
-            + " We used to have a problem with the water rolling off of our roof and ponding in our yard. Once we "
-            + "installed the rain garden, the water flows right through our yard and we don't have to worry about "
-            + "our yard when it rains.", 
-        "4", "5", "2014", plants, "0-60 Square Feet", "250-500 Square Feet", "The primary source of water comes from"
-            + " our roof. The water is funneled through downspouts which all lead to our rain garden.", 
-        "3.00"), UserInfoDB.getUser(id));
+      plants.add("Carex");
+      plants.add("Pa'uohi'iaka");
+      plants.add("'Ilima");
+      plants.add("'Ohai");
+      RainGarden garden = RainGardenDB.addRainGarden(new RainGardenFormData("", "Residential", 
+        "977 Kahili Street.", "Yes", " Residential rain garden installed in front yard right next to street corner "
+            + "storm drain.  The rain garden replaced the turf grass with absorbent soils and native vegetation "
+            + "which captures and infiltrates water from the roughly 550 square foot roof.  Since turf grass "
+            + "absorbs only about 30% of storm water runoff, this rain garden will prevent a significant amount "
+            + "of storm water runoff from entering into the street corner storm drain which eventually drains "
+            + "into Enchanted Lakes.", 
+        "", "", "", plants, "0-60 Square Feet", "500-750 Square Feet", "The primary source of runoff is coming from "
+            + "the roof through the downspout and into the rain garden.", 
+        "14.00"), UserInfoDB.getUser(id));
       
       garden.setApproved(true);
-      garden.setExternalImageURL(routes.Assets.at("images/garden-1.jpg").url());
+      garden.setExternalImageURL(routes.Assets.at("images/garden.png").url());
       garden.save();
-      
-      if (garden != null && Comment.find().all().isEmpty() && id != null) {
-        CommentDB.addComment(new CommentFormData("Wow, you garden looks nice!"), 
-            garden,
-            UserInfoDB.getUser(id));        
-      }
     }
     
     // Add rain barrel.
     if (RainBarrel.find().all().isEmpty() && id != null) {
-    RainBarrel barrel = RainBarrelDB.addRainBarrel(new RainBarrelFormData("John's Rain Barrel", "Residential", 
-        "564 Ulahala St.", "No", "We installed a set of rain barrels on the side of our house because we wanted to "
+    RainBarrel barrel = RainBarrelDB.addRainBarrel(new RainBarrelFormData("", "Residential", 
+        "1051 Keolu Dr.", "No", "We installed a set of rain barrels on the side of our house because we wanted to "
             + "protect the plants from excessive flooding. The water is collected from the gutters on the roof and flow"
             + " into these barrels. The collected water is then used for gardening. It helps cutdown our water bill!", 
             "4", "5", "2014", "Old Drum", "50 Gallons", "Blue", "Plastic", "25.00", "Gardening", "Once a year.", 
             "Covered", "Home Depot", "Self-Installed"), 
         UserInfoDB.getUser(id));
     barrel.setApproved(true);
-    barrel.setExternalImageURL(routes.Assets.at("images/barrel-1.jpg").url());
+    barrel.setExternalImageURL(routes.Assets.at("images/barrel.png").url());
     barrel.save();
     }
     
     // Add permeable paver.
     if (PermeablePavers.find().all().isEmpty() && id != null) {
-    PermeablePavers paver = PermeablePaversDB.addPermeablePavers(new PermeablePaversFormData("John's Permeable Paver", 
-        "Residential", "564 Ulahala St.", "No", "Whenever it rains, our driveway becomes a mini river. The rain would "
+    PermeablePavers paver = PermeablePaversDB.addPermeablePavers(new PermeablePaversFormData("", 
+        "Residential", "1051 Keolu Dr.", "No", "Whenever it rains, our driveway becomes a mini river. The rain would "
             + "just pool in our driveway. After we installed our permeable paver, we noticed a drastic decrease in "
             + "pooling and the lawn around our driveway looks more green.", "4", "5", "2014", "Asphalt", "Concrete", 
             "<200 Square Feet", "Self-Installed"),  UserInfoDB.getUser(id));
     paver.setApproved(true);
-    paver.setExternalImageURL(routes.Assets.at("images/paver-1.jpg").url());
+    paver.setExternalImageURL(routes.Assets.at("images/paver.png").url());
     paver.save();
     }
     

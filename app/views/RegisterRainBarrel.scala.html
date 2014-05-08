@@ -29,7 +29,7 @@
               @bootstrap3.textarea(formData("description"), "5", "Description", "Rain Barrel Description", "")
               @bootstrap3.dateadded(formData("month"), formData("day"),  formData("year"), 
                                     "Date Installed", monthTypes, dayTypes, yearTypes, false, "")
-              @upload(formData("uploadFile"), "Upload Picture", url, isNew, "")
+              @upload(formData("uploadFile"), "Upload Picture", url, isNew, "Upload files may be up to 1 MB. For best results, please upload a square-shaped image.")
               <div class="page-header"><h3>Additional Information</h3></div> 
               @bootstrap3.select(formData("rainBarrelType"), "Rain Barrel Type", "Please Select a Rain Barrel Type", barrelTypes, false, "")
               @bootstrap3.select(formData("capacity"), "Capacity", "Please Select the Capacity of the Rain Barrel", capacityTypes, false, "")
