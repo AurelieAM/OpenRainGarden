@@ -18,10 +18,6 @@ User Screencast
 Developer Screencast  
 [![screenshot](https://raw.githubusercontent.com/OpenRainGarden/OpenRainGarden/version-1.1/public/install/yt-developer.png)](https://www.youtube.com/watch?v=5RLiTqGaDks)
 
-### Comments/Issues
-
-Please make a [GitHub Issue](https://github.com/OpenRainGarden/OpenRainGarden/issues) for this repository.
-
 ### Wiki Links
 
 * [Team Meeting/Check-In](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Team-Meetings-&-Check-In)
