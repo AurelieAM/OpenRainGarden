@@ -430,7 +430,7 @@ public class PermeablePavers extends Model {
   public String formatToCSV() {
     return "\"" + this.title + "\", " + "\"" + this.propertyType + "\", " + "\"" + this.address + "\", " + "\"" 
            + this.description + "\", " + "\"" + getDateInstalledAsCSV() + "\", " + "\"" + this.material + "\", " 
-           + this.previousMaterial + "\", " + this.size + "\", " + this.installer + "\", " 
+           + this.previousMaterial + "\", " + this.size + "\", " + this.installer + "\", " + "\"" 
            + this.owner.getEmail() + "\"\n";
   }
 }

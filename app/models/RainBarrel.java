@@ -507,6 +507,6 @@ public class RainBarrel extends Model {
            + "\"" + this.capacity + "\", " + "\"" + this.color + "\", " + "\"" + this.material + "\", " 
            + "\"" + this.estimatedCost + "\", " + "\"" + this.waterUse + "\", " 
            + "\"" + this.overflowFrequency + "\", " + "\"" + this.cover + "\", " + "\"" + this.obtainedFrom + "\", "
-           + "\"" + this.installationType + "\", " + this.getOwner().getEmail() + "\"\n";
+           + "\"" + this.installationType + "\", " + "\"" + this.getOwner().getEmail() + "\"\n";
   }
 }
