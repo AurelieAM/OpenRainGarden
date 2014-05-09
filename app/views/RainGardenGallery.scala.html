@@ -9,17 +9,17 @@
 			<div class="row">
 			@for(garden <- gardenList) {
 				@if(garden.isApproved() == true) {
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-4" style="height:480px;width:375px">
 					<div class="thumbnail">
 						<img src="@routes.Application.retrieveGardenImage(garden.getID())" style="height:300px; width:300px" />
-						<div class="caption">
+						<div class="caption" style="height:150px;width:350px">
 							<h3>@garden.getTitle()</h3>
 							<ul>
 								<li>Property Type: @garden.getPropertyType()</li>
 								<li>Date Installed: @garden.getDateInstalled()</li>
 								<li>Size: @garden.getRainGardenSize()</li>
 							</ul>
-							<div style="text-align:right"><a href="/view/rain-garden/@garden.getID()">View Full Details >></a></div>
+							<div style="text-align:right;padding-right:10px"><a href="/view/rain-garden/@garden.getID()">View Full Details >></a></div>
 						</div>
 					</div>
 				</div>

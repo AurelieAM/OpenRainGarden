@@ -9,7 +9,7 @@
 			<div class="row">
 			@for(paver <- paverList) {
 				@if(paver.isApproved() == true) {
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-4" style="height:480px;width:375px">
 					<div class="thumbnail">
 						<img src="@routes.Application.retrievePaverImage(paver.getID())" style="height:300px; width:300px"/>
 						<div class="caption">
@@ -20,7 +20,7 @@
 								<li>Material: @paver.getMaterial()</li>
 								<li>Installer: @paver.getInstaller()</li>
 							</ul>
-							<div style="text-align:right"><a href="/view/permeable-pavers/@paver.getID()">View Full Details >></a></div>
+							<div style="text-align:right;padding-right:10px"><a href="/view/permeable-pavers/@paver.getID()">View Full Details >></a></div>
 						</div>
 					</div>
 				</div>

@@ -9,9 +9,9 @@
 			<div class="row">
 			@for(barrel <- barrelList) {
 				@if(barrel.isApproved() == true) {
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-4" style="height:480px;width:375px">
 					<div class="thumbnail">
-						<img src="@routes.Application.retrieveBarrelImage(barrel.getID())" style="height:300px; width:300px"style="height:300px; width:300px" />
+						<img src="@routes.Application.retrieveBarrelImage(barrel.getID())" style="height:300px; width:300px" />
 						<div class="caption">
 							<h3>@barrel.getTitle()</h3>
 							<ul>
@@ -20,7 +20,7 @@
 								<li>Type: @barrel.getRainBarrelType()</li>
 								<li>Material: @barrel.getMaterial()</li>
 							</ul>
-							<div style="text-align:right"><a href="/view/rain-barrel/@barrel.getID()">View Full Details >></a></div>
+							<div style="text-align:right;padding-right:10px"><a href="/view/rain-barrel/@barrel.getID()">View Full Details >></a></div>
 						</div>
 					</div>
 				</div>
