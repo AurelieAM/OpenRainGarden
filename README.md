@@ -13,8 +13,8 @@ An example of the website's home page.
 
 ### Usage
 
-[Developer Guide](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Developer-Guide)
-[User Guide](https://github.com/OpenRainGarden/OpenRainGarden/wiki/User-Guide)
+[Developer Guide](https://github.com/OpenRainGarden/OpenRainGarden/wiki/Developer-Guide)  
+[User Guide](https://github.com/OpenRainGarden/OpenRainGarden/wiki/User-Guide)  
 
 ### Screencasts
 
