@@ -65,10 +65,18 @@
             <img class="featurette-image img-responsive image-center"  alt="500x500" src="@routes.Application.retrieveIndexContentImage(block.getId())"></img>
           </div>
         </div>
-        <div style="text-align:left"><a href= "@routes.Application.editIndexBlock(block.getId())"><button type="button"><h4>Edit</h4></button></a></div>
+        
+        <div class="row">
+        <div class ="col-sm-7">
+				<div style="text-align:left">
+					<a href="@routes.Application.editIndexBlock(block.getId())"><button class="btn btn-primary">Edit</button></a>
+					<a href="@routes.Application.deleteIndexBlock(block.getId())"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete the content block:\n@block.getTitle()?');">Delete</button></a>
+				</div>
+		</div>
+				<div class="col-sm-5"></div>
+			</div>
         </div>
       }
-      		<div style="text-align:right"><a href="#content_blocks"><h4>Back to top</h4></a></div>
 		</div>
 	</div>
 			
@@ -125,7 +133,6 @@
 					}
 				</div>
 			</div>
-			<div style="text-align:right"><a href="#resources"><h4>Back to top</h4></a></div>	
 		</div>
 	</div>
 		
