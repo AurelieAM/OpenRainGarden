@@ -1527,4 +1527,19 @@ public class Application extends Controller {
     }
     return formData;
   }
+  
+  /**
+   * Delete an IndexContent object.
+   * @param id The ID of the IndexContent.
+   * @return The admin control panel.
+   */
+  @Security.Authenticated(Secured.class)
+  public static Result deleteIndexBlock(Long id) {
+    if (Secured.isLoggedIn(ctx())) {
+      if (Secured.getUserInfo(ctx()).isAdmin()) {
+        IndexContentDB.deleteIndexContent(id);
+      }
+    }
+    return redirect(routes.Application.adminPanel());
+  }
 }

@@ -55,5 +55,16 @@ public class IndexContentDB {
 	public static List<IndexContent> getIndexContents() {
 	  return IndexContent.find().all();
 	}
+
+	/**
+	 * Delete an IndexContent from the database.
+	 * @param id The ID of the IndexContent to delete.
+	 */
+  public static void deleteIndexContent(Long id) {
+    IndexContent indexContent = IndexContentDB.getIndexContent(id);
+    if (indexContent != null) {
+      indexContent.delete();
+    }
+  }
   
 }

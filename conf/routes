@@ -53,6 +53,7 @@ GET     /admin/editresource/:find/:id controllers.Application.editResource(find:
 POST    /admin/postEditResource/:find controllers.Application.postEditResource(find: String)
 GET     /admin/deleteresourc/:id      controllers.Application.deleteResource(id: Long)
 GET     /admin/newindexblock          controllers.Application.newIndexBlock()
+GET     /admin/deleteindexblock/:id   controllers.Application.deleteIndexBlock(id: Long)
 GET     /admin/editindexblock/:id     controllers.Application.editIndexBlock(id: Long)
 POST    /admin/postindexblock/        controllers.Application.postEditIndexBlock(isNew: Boolean)
 GET     /image/resource/:id           controllers.Application.retrieveResourceImage(id: Long)
