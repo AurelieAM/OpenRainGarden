@@ -8,6 +8,7 @@ An example of the website's home page.
 ### Key Points
 - Simple registration process for rainwater runoff solutions. This application supports the following solutions: rain gardens, rain barrels and permeable pavers.
 - Image upload support for solution registration.
+- Gallery and Map functions to display all the solutions registered with the site.
 - Editable index page content for site administrator.
 
 ### Usage
