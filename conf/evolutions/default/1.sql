@@ -68,6 +68,7 @@ create table plant (
   climate_type              varchar(255),
   is_initial_plant          tinyint(1) default 0,
   image                     longblob,
+  external_image_url        varchar(255),
   constraint pk_plant primary key (id))
 ;
 

@@ -7,6 +7,7 @@ plants:
         growth: Sedge
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/1.jpg
         
 - !!models.Plant
         name: "'Akia"       
@@ -15,6 +16,7 @@ plants:
         growth: Low Shurb
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/2.jpg
 
 - !!models.Plant
         name: "'Akulikuli"       
@@ -23,6 +25,7 @@ plants:
         growth: Ground Cover
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/3.jpg
 
 - !!models.Plant
         name: Carex       
@@ -31,6 +34,7 @@ plants:
         growth: Sedge
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/4.jpg
 
 - !!models.Plant
         name: "'Ilie'e"       
@@ -39,6 +43,7 @@ plants:
         growth: Low Shrub
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/5.jpg
 
 - !!models.Plant
         name: "Koki'o ke'oke'o"       
@@ -47,6 +52,7 @@ plants:
         growth: Shrub
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/6.jpg
 
 - !!models.Plant
         name: "Ko'oko'olau"       
@@ -55,6 +61,7 @@ plants:
         growth: Low Shrub
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/7.jpg
 
 - !!models.Plant
         name: Kupukupu        
@@ -63,6 +70,7 @@ plants:
         growth: Fern
         climateType: Wet & Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/8.jpg
         
 - !!models.Plant
         name: "'A'ali'i"        
@@ -71,6 +79,7 @@ plants:
         growth: Bush
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/9.jpg
 
 - !!models.Plant
         name: "'Ahinahina"      
@@ -79,6 +88,7 @@ plants:
         growth: Herb/Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/10.jpg
 
 - !!models.Plant
         name: "'Akoko"     
@@ -87,6 +97,7 @@ plants:
         growth: Bush
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/11.jpg
 
 - !!models.Plant
         name: "'Aweoweo"     
@@ -95,6 +106,7 @@ plants:
         growth: Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/12.jpg
 
 - !!models.Plant
         name: "Hinahina ewa"      
@@ -103,6 +115,7 @@ plants:
         growth: Bush
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/13.jpg
 
 - !!models.Plant
         name: Ihi     
@@ -111,6 +124,7 @@ plants:
         growth: Ground Cover
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/14.jpg
 
 - !!models.Plant
         name: "'Ilima"      
@@ -118,7 +132,8 @@ plants:
         placement: Slope/Berm
         growth: Low Shrub
         climateType: Dry Climate
-        isInitialPlant: true
+        isInitialPlant: true        
+        externalImageURL: /assets/plants/15.jpg
 
 - !!models.Plant
         name: "Kawelu"      
@@ -127,6 +142,7 @@ plants:
         growth: Bunching Grass
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/16.jpg
 
 - !!models.Plant
         name: "Kulu'i"     
@@ -135,6 +151,7 @@ plants:
         growth: Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/17.jpg
 
 - !!models.Plant
         name: "Maiapilo"     
@@ -143,6 +160,7 @@ plants:
         growth: Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/18.jpg
 
 - !!models.Plant
         name: Naio papa     
@@ -151,6 +169,7 @@ plants:
         growth: Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/19.jpg
 
 - !!models.Plant
         name: "'Ohai"     
@@ -159,6 +178,7 @@ plants:
         growth: Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/20.jpg
 
 - !!models.Plant
         name: "'Ohelo kai"     
@@ -167,6 +187,7 @@ plants:
         growth: Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/21.jpg
 
 - !!models.Plant
         name: "Pa'uohi'iaka"      
@@ -175,6 +196,7 @@ plants:
         growth: Vine
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/22.jpg
 
 - !!models.Plant
         name: "Pohinahina"     
@@ -183,6 +205,7 @@ plants:
         growth: Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/23.jpg
 
 - !!models.Plant
         name: "Pohuehue"     
@@ -191,6 +214,7 @@ plants:
         growth: Vine
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/24.jpg
 
 - !!models.Plant
         name: "'Ulei"      
@@ -199,6 +223,7 @@ plants:
         growth: Low Shrub
         climateType: Dry Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/25.jpg
         
 - !!models.Plant
         name: "'Ae'ae"      
@@ -207,6 +232,7 @@ plants:
         growth: Ground Cover
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/26.jpg
         
 - !!models.Plant
         name: "A'ka'akai"      
@@ -215,6 +241,7 @@ plants:
         growth: Tall Rush
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/27.jpg
         
 - !!models.Plant
         name: "'Ala'ala wai nui"       
@@ -223,6 +250,7 @@ plants:
         growth: Herb
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/28.jpg
         
 - !!models.Plant
         name: "Alahe'e"       
@@ -231,6 +259,7 @@ plants:
         growth: Tree
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/29.jpg
         
 - !!models.Plant
         name: "Hapu'u"       
@@ -239,6 +268,7 @@ plants:
         growth: Tall Fern
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/30.jpg
         
 - !!models.Plant
         name: "Ihi'ihilauakea"       
@@ -247,6 +277,7 @@ plants:
         growth: Ground Cover
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/31.jpg
         
 - !!models.Plant
         name: "'Iliahi"      
@@ -255,6 +286,7 @@ plants:
         growth: Tree
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/32.jpg
         
 - !!models.Plant
         name: Loulu      
@@ -263,6 +295,7 @@ plants:
         growth: Tree
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/33.jpg
         
 - !!models.Plant
         name: Makaloa      
@@ -271,6 +304,7 @@ plants:
         growth: Tall Sedge
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/34.jpg
         
 - !!models.Plant
         name: "Mamake"       
@@ -279,6 +313,7 @@ plants:
         growth: Tree
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/35.jpg
         
 - !!models.Plant
         name: "Mau'u 'aki 'aki"      
@@ -287,6 +322,7 @@ plants:
         growth: Bunching Grass
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/36.jpg
         
 - !!models.Plant
         name: Nehe      
@@ -295,6 +331,7 @@ plants:
         growth: Ground Cover
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/37.jpg
         
 - !!models.Plant
         name: "Pu'uka'a"      
@@ -303,6 +340,7 @@ plants:
         growth: Sedge
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/38.jpg
         
 - !!models.Plant
         name: Uki       
@@ -311,6 +349,7 @@ plants:
         growth: Sedge
         climateType: Wet Climate
         isInitialPlant: true
+        externalImageURL: /assets/plants/39.jpg
         
 - !!models.Plant
         name: "'Uki'uki"      
@@ -318,8 +357,8 @@ plants:
         placement: Basin
         growth: Sedge
         climateType: Wet Climate 
-        isInitialPlant: true       
-                
+        isInitialPlant: true
+        externalImageURL: /assets/plants/40.jpg               
 
                      
                       

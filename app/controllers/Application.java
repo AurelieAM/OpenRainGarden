@@ -1022,7 +1022,9 @@ public class Application extends Controller {
         return ok(plant.getImage()).as("image/jpeg");
       }
       else if (plant.isInitialPlant()) {
-        return redirect(routes.Assets.at("plants/" + plant.getPictureName()));
+        if (plant.getExternalImageURL() != null && !plant.getExternalImageURL().isEmpty()) {
+          return redirect(plant.getExternalImageURL());
+        }
       }
     }
     return redirect(routes.Assets.at("images/placeholder.gif"));

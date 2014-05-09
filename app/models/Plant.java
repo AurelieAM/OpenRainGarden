@@ -1,6 +1,5 @@
 package models;
 
-import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -29,6 +28,7 @@ public class Plant extends Model {
   private boolean isInitialPlant = false;
   @Lob
   private byte [] image;
+  private String externalImageURL;
   
   // Relationships.
   @ManyToMany (mappedBy = "plants", cascade = CascadeType.ALL)
@@ -148,6 +148,20 @@ public class Plant extends Model {
     this.image = image;
   }
   
+  /**
+   * @return the externalImageURL
+   */
+  public String getExternalImageURL() {
+    return externalImageURL;
+  }
+
+  /**
+   * @param externalImageURL the externalImageURL to set
+   */
+  public void setExternalImageURL(String externalImageURL) {
+    this.externalImageURL = externalImageURL;
+  }
+
   /**
    * @return the isInitialPlant
    */
