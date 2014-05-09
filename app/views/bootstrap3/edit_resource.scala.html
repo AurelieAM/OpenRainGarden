@@ -1,13 +1,12 @@
 @(resource: Resource, find: String)
 
 <div class="col-sm-6 col-md-4">
-	<div class="thumbnail" style="height:320px; widget:320px">
-		<img src="@routes.Application.retrieveResourceImage(resource.getID())">
-		<div class="caption">
-			<a href="@resource.getUrl()" target="_blank">
-				<h3 align="center">@resource.getHeader()</h3>
-			</a>
-			<div class="row">
+	<div class="thumbnail" style="width:340px">
+		<img src="@routes.Application.retrieveResourceImage(resource.getID())" style="height:170px; width:320px">
+		<div class="caption" style="height:170px; width:320px;">
+			<h3 style="text-align:center;"><a href="@resource.getUrl()" target="_blank">@resource.getHeader()</a></h3>
+			
+			<div class="row" style="vertical-align:bottom">
 				<div class="col-sm-6" style="text-align:left">
 					<a href="@routes.Application.editResource(find, resource.getID())"><button class="btn btn-primary">Edit</button></a>
 				</div>
